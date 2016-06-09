@@ -1,6 +1,12 @@
-#' <Add Title>
+#' Circular Charts.
 #'
-#' <Add Description>
+#' Create a cricular charts based on ECharts 3.0.
+#'
+#'
+#' @param message A dataframe.
+#' @param width,height nada.
+#' @return A circular charts based on ECharts 3.0.
+#'
 #'
 #' @import htmlwidgets
 #'
