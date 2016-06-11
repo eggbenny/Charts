@@ -1,7 +1,7 @@
 Package: Charts
 Title: Charts
 Version: 0.0.0.9000
-Authors@R: c(person("Mahmudul", "", email = "first.last@example.com", role = c("aut", "cre")),
+Authors@R: c(person("Mahmudul", "Hasan", email = "first.last@example.com", role = c("aut", "cre")),
   person("Benedito", "Chou", email = "first.last@example.com", role = c("aut")),
   person("Emelie", "Gustafsson", email = "first.last@example.com", role = c("aut")))
 Description: A htmlwidget to make ECharts 3.0 donut chart.

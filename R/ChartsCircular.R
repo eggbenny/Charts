@@ -1,6 +1,6 @@
 #' Circular Charts.
 #'
-#' Create a cricular charts based on ECharts 3.0.
+#' Create a cricular chart based on ECharts 3.0.
 #'
 #'
 #' @param message A dataframe.
