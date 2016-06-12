@@ -15,6 +15,6 @@ ChartsCircular(message, width = NULL, height = NULL)
 A circular charts based on ECharts 3.0.
 }
 \description{
-Create a cricular charts based on ECharts 3.0.
+Create a cricular chart based on ECharts 3.0.
 }
 
