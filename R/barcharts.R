@@ -25,7 +25,7 @@ barcharts <- function(message, width = NULL, height = NULL) {
     x,
     width = width,
     height = height,
-    package = 'barcharts'
+    package = 'Charts'
   )
 }
 
