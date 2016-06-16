@@ -14,13 +14,13 @@ HTMLWidgets.widget({
 
         // TODO: code to render the widget, e.g.
         //el.innerText = x.message;
-        
-        
+
+
         var mini_pie_chart = echarts.init(el, theme);
-        
+
         mini_pie_chart.setOption({
           title: {
-            text: x.message.simp,
+            text: x.message.simp + "/ 100",
             subtext: '',
             sublink: '',
             x: 'center',
@@ -29,7 +29,7 @@ HTMLWidgets.widget({
             textStyle: {
               color: 'rgba(0,0,0,0.8)',
               fontFamily: '"Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif',
-              fontSize: 35,
+              fontSize: 20,
               fontWeight: 'bolder'
             }
           },
@@ -40,9 +40,9 @@ HTMLWidgets.widget({
           legend: {
             orient: 'vertical',
             x: document.getElementById('graph_mini_pie').offsetWidth / 2, // Dynamically set x
-            y: 45,
+            y: 10,
             itemGap: 12,
-            data: ['Story Impact', 'All Story', 'Category'], // Call legend with name
+            data: ['This Story', 'vs. All Stories', 'vs. Category'], // Call legend with name
           },
           toolbox: {
             show: true,
@@ -53,50 +53,50 @@ HTMLWidgets.widget({
             }
           },
           series: [{
-            name: 'Story Impact',
+            name: 'This Story',
             type: 'pie',
             clockWise: false,
-            radius: [125, 150],
+            radius: [90, 115],
             itemStyle: dataStyle,
             data: [{
               value: x.message.simp,
-              name: 'Story Impact'
+              name: 'This Story'
             }, {
-              value: 200 - x.message.simp,
+              value: 100 - x.message.simp,
               name: '',
               itemStyle: placeHolderStyle
             }]
           }, {
-            name: 'All Story',
+            name: 'vs. All Stories',
             type: 'pie',
             clockWise: false,
-            radius: [100, 125],
+            radius: [65, 90],
             itemStyle: dataStyle,
             data: [{
               value: x.message.asavg,
-              name: 'All Story'
+              name: 'vs. All Stories'
             }, {
-              value: 200 - x.message.asavg,
+              value: 100 - x.message.asavg,
               name: '',
               itemStyle: placeHolderStyle
             }]
           }, {
-            name: 'Category',
+            name: 'vs. Category',
             type: 'pie',
             clockWise: false,
-            radius: [75, 100],
+            radius: [40, 65],
             itemStyle: dataStyle,
             data: [{
               value: x.message.catavg,
-              name: 'Category'
+              name: 'vs. Category'
             }, {
-              value: 200 - x.message.catavg,
+              value: 100 - x.message.catavg,
               name: '',
               itemStyle: placeHolderStyle
             }]
           }]
         });// end chart options
-        
+
 
       },
 
