@@ -1,10 +1,10 @@
 # (uncomment to add a dependency)
 dependencies:
 - name: Echarts
-  version: 3.1.7
+  version: 2.2.0
   src: htmlwidgets
-  script: ./lib/echarts.min.js
+  script: ./lib/echarts-all.js
 - name: Echarts-Config
-  version: 3.1.7
+  version: 2.2.0
   src: htmlwidgets
   script: ./lib/charts-configs.js

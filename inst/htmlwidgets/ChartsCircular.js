@@ -42,53 +42,55 @@ HTMLWidgets.widget({
             x: document.getElementById('graph_mini_pie').offsetWidth / 2, // Dynamically set x
             y: 10,
             itemGap: 12,
-            data: ['This Story', 'vs. All Stories', 'vs. Category'], // Call legend with name
+            data: [x.message.simp_title, x.message.asavg_title, x.message.catavg_title], // Call legend with name
           },
           toolbox: {
-            show: true,
-            feature: {
-              mark: {
-                show: true
-              }
-            }
-          },
+
+    			  show: true,
+    			  feature: {
+    				saveAsImage: {
+    				  show: true,
+    				  title: "Save Image"
+    				}
+    			  }
+    			},
           series: [{
-            name: 'This Story',
+            name: x.message.simp_title,
             type: 'pie',
             clockWise: false,
             radius: [90, 115],
             itemStyle: dataStyle,
             data: [{
               value: x.message.simp,
-              name: 'This Story'
+              name: x.message.simp_title
             }, {
               value: 100 - x.message.simp,
               name: '',
               itemStyle: placeHolderStyle
             }]
           }, {
-            name: 'vs. All Stories',
+            name: x.message.asavg_title,
             type: 'pie',
             clockWise: false,
             radius: [65, 90],
             itemStyle: dataStyle,
             data: [{
               value: x.message.asavg,
-              name: 'vs. All Stories'
+              name: x.message.asavg_title
             }, {
               value: 100 - x.message.asavg,
               name: '',
               itemStyle: placeHolderStyle
             }]
           }, {
-            name: 'vs. Category',
+            name: x.message.catavg_title,
             type: 'pie',
             clockWise: false,
             radius: [40, 65],
             itemStyle: dataStyle,
             data: [{
               value: x.message.catavg,
-              name: 'vs. Category'
+              name: x.message.catavg_title
             }, {
               value: 100 - x.message.catavg,
               name: '',
