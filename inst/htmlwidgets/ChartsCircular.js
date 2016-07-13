@@ -28,7 +28,7 @@ HTMLWidgets.widget({
             itemGap: 20,
             textStyle: {
               color: 'rgba(0,0,0,0.8)',
-              fontFamily: '"Helvetica Neue", Roboto, Arial, "Droid Sans", sans-serif',
+              fontFamily: 'Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif',
               fontSize: 20,
               fontWeight: 'bolder'
             }
@@ -43,13 +43,16 @@ HTMLWidgets.widget({
             y: 10,
             itemGap: 12,
             data: [x.message.simp_title, x.message.asavg_title, x.message.catavg_title], // Call legend with name
+            textStyle: {
+              fontFamily: 'Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif'
+            }
           },
           toolbox: {
 
     			  show: true,
     			  feature: {
     				saveAsImage: {
-    				  show: true,
+    				  show: false,
     				  title: "Save Image"
     				}
     			  }
