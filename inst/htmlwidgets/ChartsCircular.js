@@ -42,7 +42,7 @@ HTMLWidgets.widget({
             x: document.getElementById('graph_mini_pie').offsetWidth / 2, // Dynamically set x
             y: 10,
             itemGap: 12,
-            data: [x.message.simp_title, x.message.asavg_title, x.message.catavg_title], // Call legend with name
+            data: [x.message.simp_title], // Call legend with name
             textStyle: {
               fontFamily: 'Source Sans Pro, Helvetica Neue, Helvetica, Arial, sans-serif'
             }
@@ -68,34 +68,6 @@ HTMLWidgets.widget({
               name: x.message.simp_title
             }, {
               value: 100 - x.message.simp,
-              name: '',
-              itemStyle: placeHolderStyle
-            }]
-          }, {
-            name: x.message.asavg_title,
-            type: 'pie',
-            clockWise: false,
-            radius: [65, 90],
-            itemStyle: dataStyle,
-            data: [{
-              value: x.message.asavg,
-              name: x.message.asavg_title
-            }, {
-              value: 100 - x.message.asavg,
-              name: '',
-              itemStyle: placeHolderStyle
-            }]
-          }, {
-            name: x.message.catavg_title,
-            type: 'pie',
-            clockWise: false,
-            radius: [40, 65],
-            itemStyle: dataStyle,
-            data: [{
-              value: x.message.catavg,
-              name: x.message.catavg_title
-            }, {
-              value: 100 - x.message.catavg,
               name: '',
               itemStyle: placeHolderStyle
             }]
